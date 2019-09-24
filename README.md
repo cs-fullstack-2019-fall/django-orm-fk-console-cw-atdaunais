@@ -24,3 +24,13 @@ From the shell copy the commands your entered in the shell to create the instanc
 
 Copy the shell commands you used here!
 
+>>> from graded_app.models import Author, Post
+>>> Author.objects.all()
+<QuerySet [<Author: Andrew Daunais>]>
+>>> Post.objects.all()
+<QuerySet [<Post: First Post>, <Post: Second Post>, <Post: Third Post>]>
+>>> author1 = Author.objects.first()
+>>> author1
+<Author: Andrew Daunais>
+>>> author1.post_set.all()
+<QuerySet [<Post: First Post>, <Post: Second Post>, <Post: Third Post>]>
